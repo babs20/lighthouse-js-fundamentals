@@ -1,5 +1,3 @@
-
-
 const loopyLighthouse = (range, multiples, words) => {
   for (let i = range[0]; i < range[1] + 1; i++) {
     // Check if it is a multiple of 3 AND 4. If it is print 'LoopyLighthouse'
@@ -16,6 +14,6 @@ const loopyLighthouse = (range, multiples, words) => {
       console.log(i);
     }
   }
-}
+};
 
 console.log(loopyLighthouse([15, 90], [2, 5], ["Batty", "Beacon"]));

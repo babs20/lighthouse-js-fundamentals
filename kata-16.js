@@ -25,9 +25,6 @@ const queenThreat = () => {
   // X-Axis Check | If on the same X-Axis
   if (whiteQueen[0] === blackQueen[0] || whiteQueen[1] === blackQueen[1]) {
     return true;
-    // Y Axis Check | If on the same Y-Axis
-  } else if (whiteQueen[1] === blackQueen[1]) {
-    return true;
     // 240 degree Axis | If the sum of one queen array values = other queen x value
   } else if (blackQueen.reduce(add) === whiteQueen[0] || whiteQueen.reduce(add) === blackQueen[0]) {
     return true;
@@ -40,7 +37,7 @@ const queenThreat = () => {
   } else {
     return false;
   }
-}
+};
 
 // Test One
 let whiteQueen = [0, 5];
