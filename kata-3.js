@@ -1,4 +1,4 @@
-const numberOfVowels = function (data) {
+const numberOfVowels = function(data) {
   // Intialize an array to store vowels
   let arrayOfVowels = [];
   // Create an array of conditions for the string's characters to be tested against
@@ -10,8 +10,8 @@ const numberOfVowels = function (data) {
     }
   }
   // Return the length of the array to get the number of vowels in the string tested
-  return arrayOfVowels.length
-}
+  return arrayOfVowels.length;
+};
 
 console.log(numberOfVowels("orange"));
 console.log(numberOfVowels("lighthouse labs"));

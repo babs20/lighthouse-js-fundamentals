@@ -5,7 +5,7 @@ const urlEncode = function(text) {
   // If it is, replace it by creating a substring before and after its index. Then concat them with %20 between.
   for (let i = 0; i < text.length; i++) {
     if (text[i] === ' ') {
-      text = text.substring(0, i) + '%20' + text.substring(i+1);
+      text = text.substring(0, i) + '%20' + text.substring(i + 1);
     }
   }
   return text;

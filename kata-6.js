@@ -1,42 +1,40 @@
-const whereCanIPark = function (spots, vehicle) {  
+// Function to find the first open spot by looping through each rows' values
+// If the row value matches a value in the conditional test for the vehicle it returns the coords
+// If no spot is found it returns false
+const findSpot = (type, spots) => {
+  for (let r = 0; r < spots.length; r++) {
+    for (let c = 0; c < spots[r].length; c++) {
+      if (type.includes(spots[r][c])) {
+        return [c, r];
+      }
+    }
+  }
+  return false;
+};
+
+const whereCanIPark = function(spots, vehicle) {
   // Set up conditional tests for each vehicle type
   const regularConditions = ['R'];
   const smallConditions = ['S', 'R'];
   const mcConditions = ['M', 'S', 'R'];
-  // Initialize the final parkingCoords
-  let parkingCoords = [];
-
-  // Function to find the first open spot by looping through each rows' values
-  // If the row value matches a value in the conditional test for the vehicle it returns the coords
-  // If no spot is found it returns false
-  const findSpot = (type) => {
-    for (let r = 0; r < spots.length; r++) {
-      for (let c = 0; c < spots[r].length; c++) {
-        if (type.includes(spots[r][c])) {
-          return parkingCoords = [c, r];
-        }
-      }
-    }
-    return false;
-  }
 
   // Switch statment to determine which array to use in the if conditional statement
   // Returns the value from the findSpot function
   switch (vehicle) {
-    case 'regular':
-    return findSpot(regularConditions);
-    break;
-    case 'small':
-    return findSpot(smallConditions);
-    break;
-    case 'motorcycle':
-    return findSpot(mcConditions);
-    break;
+  case 'regular':
+    return findSpot(regularConditions, spots);
+  case 'small':
+    return findSpot(smallConditions, spots);
+  case 'motorcycle':
+    return findSpot(mcConditions, spots);
   }
-  
+
 };
 
 
+
+
+// test code
 console.log(whereCanIPark(
   [
     // COLUMNS ARE X
@@ -71,4 +69,4 @@ console.log(whereCanIPark(
     ['S', 'r', 'S', 'M', 'm', 'S']
   ],
   'motorcycle'
-))
+));

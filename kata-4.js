@@ -4,7 +4,7 @@ const instructorWithfindName = function(instructors) {
   let longestName;
   // Loop through each name and add it to the findName variable if it was longer than the previous value in the variable.
   // Add that object to longestName variable to returned once the for loop is complete
-  for(let i= 0; i < instructors.length; i++) {
+  for (let i = 0; i < instructors.length; i++) {
     if (instructors[i].name.length > findName.length) {
       findName = instructors[i].name;
       longestName = instructors[i];

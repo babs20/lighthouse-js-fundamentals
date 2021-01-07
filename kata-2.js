@@ -20,7 +20,7 @@ const conditionalSum = function(values, condition) {
   }
   // Return the final number using the reduce method to add all the values in the array
   // return approvedNum.reduce(reducer);
-}
+};
 
 console.log(conditionalSum([1, 2, 3, 4, 5], "even"));
 console.log(conditionalSum([1, 2, 3, 4, 5], "odd"));
